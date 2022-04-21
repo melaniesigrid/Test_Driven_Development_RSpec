@@ -7,6 +7,8 @@ class Solver
   end
 
   def reverse(string)
+    raise ArgumentError unless string.is_a? String
+
     string.reverse
   end
 
