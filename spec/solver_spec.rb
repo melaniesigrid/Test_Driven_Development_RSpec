@@ -36,9 +36,34 @@ describe Solver do
       reversed = @solver.reverse('My sentence')
       expect(reversed).to eql 'ecnetnes yM'
     end
+  end
 
-    # it "throws an error if there's more than 1 argument" do
-    #   expect { @solver.reverse(123) }.to raise_error(ArgumentError)
-    # end
+  context '#fizzbuzz' do
+    intNum = nil
+    fizzbuzzed = nil
+
+    it 'takes an integer and returns a string' do
+      intNum = 7
+      fizzbuzzed = @solver.fizzbuzz(intNum)
+      expect(fizzbuzzed).to be_a String
+    end
+
+    it 'returns fizzbuzz if number is divisible by 3 and 5' do
+      intNum = 30
+      fizzbuzzed = @solver.fizzbuzz(intNum)
+      expect(fizzbuzzed).to eql 'fizzbuzz'
+    end
+
+    it 'returns fizz when the number is divisible only by 3' do
+      intNum = 9
+      fizzbuzzed = @solver.fizzbuzz(intNum)
+      expect(fizzbuzzed).to eql 'fizz'
+    end
+
+    it 'returns buzz when the number is divisible only by 5' do
+      intNum = 10
+      fizzbuzzed = @solver.fizzbuzz(intNum)
+      expect(fizzbuzzed).to eql 'buzz'
+    end
   end
 end
