@@ -27,6 +27,11 @@ describe Solver do
 
   context 'reverse' do
     reversed = nil
+
+    it 'check if is a string' do
+      expect { @solver.reverse(123) }.to raise_error(ArgumentError)
+    end
+
     it 'returns "54321" when argument is "12345"' do
       reversed = @solver.reverse('12345')
       expect(reversed).to eql '54321'
