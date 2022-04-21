@@ -5,7 +5,7 @@ describe Solver do
     @solver = Solver.new
   end
 
-  context "#factorial" do
+  context '#factorial' do
     it 'throws an argument error if the input parameter is a negative integer' do
       expect { @solver.factorial(-5) }.to raise_exception ArgumentError
     end
@@ -39,30 +39,25 @@ describe Solver do
   end
 
   context '#fizzbuzz' do
-    intNum = nil
     fizzbuzzed = nil
 
     it 'takes an integer and returns a string' do
-      intNum = 7
-      fizzbuzzed = @solver.fizzbuzz(intNum)
+      fizzbuzzed = @solver.fizzbuzz(7)
       expect(fizzbuzzed).to be_a String
     end
 
     it 'returns fizzbuzz if number is divisible by 3 and 5' do
-      intNum = 30
-      fizzbuzzed = @solver.fizzbuzz(intNum)
+      fizzbuzzed = @solver.fizzbuzz(30)
       expect(fizzbuzzed).to eql 'fizzbuzz'
     end
 
     it 'returns fizz when the number is divisible only by 3' do
-      intNum = 9
-      fizzbuzzed = @solver.fizzbuzz(intNum)
+      fizzbuzzed = @solver.fizzbuzz(9)
       expect(fizzbuzzed).to eql 'fizz'
     end
 
     it 'returns buzz when the number is divisible only by 5' do
-      intNum = 10
-      fizzbuzzed = @solver.fizzbuzz(intNum)
+      fizzbuzzed = @solver.fizzbuzz(10)
       expect(fizzbuzzed).to eql 'buzz'
     end
   end
