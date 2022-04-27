@@ -47,6 +47,7 @@ Run `rspec`
 - GitHub: [@gabyse1](https://github.com/gabyse1)
 - LinkedIn: [gabyse](https://www.linkedin.com/in/gabyse/)
 - Twitter: [@gabyse0](https://twitter.com/gabyse0)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
